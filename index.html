@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hiện số thứ tự</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+	<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+		  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://vsyswebteam.github.io/LeafNodes/leaf.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous"></script>
+</head>
+<style>
+	#hangcho {
+		font-size: 100px;
+	}
+
+	#dangkham {
+		font-size: 100px;
+		color: #00583b;
+	}
+	p,h1,h5{text-align: center;}
+</style>
+<body>
+
+<div class="container-fluid">
+
+	<!--
+            Giao diện có thể sủa tùy ý, phần id của 1 tag có thể tương ứng với biến online của OP
+            ví dụ ở đây là hangcho và dangkham
+         -->
+
+	<div class="row">
+		<div class="col-md-12" style="margin-top: 20px">
+			<div class="well">
+				<h1>PHÒNG KHÁM TAI MŨI HỌNG - BÁC SĨ SƠN</h1>
+				<h5><i class="glyphicon glyphicon-map-marker"></i>
+					Địa chỉ: <a href="https://share.here.com/p/s-Yz1idWlsZGluZztsYXQ9MTAuODUxMTtsb249MTA2LjYzODI5O249MjIrJUM0JTkwJUM2JUIwJUUxJUJCJTlEbmcrJUM0JTkwSFQrMjE7bmxhdD0xMC44NTExMztubG9uPTEwNi42MzgzO2g9MTUyOTAx"
+								target="_blank">số 22 ĐHT12 - P.Đông Hưng Thuận - Quận 12</a></h5>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<p><span style="font-size: 40px"><i class="glyphicon glyphicon-user"></i> Đang chờ: </span></p>
+			<p><span id="hangcho">--</span></div></p>
+		<div class="col-md-6">
+			<p><span style="font-size: 40px"><i class="glyphicon glyphicon-user"></i> Đang khám: </span></p>
+			<p><span id="dangkham">--</span></p>
+		</div>
+	</div>
+
+
+
+	<!-- Phần footer của VSYS -->
+	<footer class="page-footer font-small blue">
+		<div class="footer-copyright text-center py-3">
+			<i class="vsys-logo"></i>
+			Powered by V-Logic
+			<a href="http://vsys.com.vn/" target="_blank">vsys.com.vn</a> -- Online <span id='_online'></span>/<span id='_limit'></span>  <span id='_msg'></span>
+		</div>
+	</footer>
+</div>
+
+<script>
+	var subID = "wandaa252b26d38421a"; //Mã của OP, truy cập địa chỉ ip của OP ở 8080 sẽ thấy mã, mỗi OP có 1 mã riêng
+</script>
+<script src="https://vsyswebteam.github.io/LeafNodes/leaf.js"></script>
+</body>
+</html>
